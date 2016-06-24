@@ -1,11 +1,15 @@
+from app.models import GuestbookEntry
 from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-  foo = request.GET.get('first_name')
-  bar = request.GET.get('last_name')
-  context = {
-    "baz": foo,
-    "bat": bar
-  }
-  return render(request, "index.html", context)
+    context = {}
+    if request.POST:
+        new_gb_entry = GuestbookEntry(
+            name=request.POST["post_request_name"],
+            email=request.POST["post_request_email"],
+            comment=request.POST["post_request_comment"]
+        )
+        new_gb_entry.save()
+    context["guestbook_entries"] = GuestbookEntry.objects.all()
+    return render(request, "index.html", context)
