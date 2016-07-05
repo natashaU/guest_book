@@ -11,3 +11,4 @@ class GuestbookEntry(models.Model):
     name = models.CharField(max_length=255)
     email = models.EmailField(max_length=255, blank=True)
     comment = models.CharField(max_length=1023)
+    job = models.CharField(max_length=255)
