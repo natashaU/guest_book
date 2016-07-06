@@ -8,7 +8,8 @@ def index(request):
         new_gb_entry = GuestbookEntry(
             name=request.POST["post_request_name"],
             email=request.POST["post_request_email"],
-            comment=request.POST["post_request_comment"]
+            comment=request.POST["post_request_comment"],
+            job=request.POST["post_request_job"]
         )
         new_gb_entry.save()
     context["guestbook_entries"] = GuestbookEntry.objects.all()

@@ -7,6 +7,8 @@
       <input type="text" name="post_request_email" value="{{ default_email}}"><br />
       <label for="your_comment"> Your comment:</label><br />
       <input type = "text" name="post_request_comment" value="{{ default_comment }}"><br />
+      <label for="your_job"> Your job: </label><br />
+      <input type = "text" name="post_request_job" value="{{ default_job }}"><br />
       <input type="submit" value="OK">
     </form>
     <table>
@@ -24,6 +26,11 @@
           Comment:&nbsp;{{ guestbook_entry.comment }}
         </td>
       </tr>
+      </tr>
+      <td>
+        Job:&nbsp;{{ guestbook_entry.job }}
+    <td>
+  </tr>
     {% endfor %}
     </table>
   </body>
