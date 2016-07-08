@@ -1,0 +1,10 @@
+{
+  "name": "guestbook",
+  "version": "0.0.1",
+  "description": "my guest_book app",
+  "author": "Natasha Umer",
+  "licence": "no pants",
+  "dependencies": {
+    "react": "^15.2.0"
+  }
+}
