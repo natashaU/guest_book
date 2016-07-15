@@ -1,15 +1,15 @@
 <html>
   <body>
-    <form action="/" method="post">
+    <form action="/" method="post" >
       <label for="your_name"> Your name: </label><br />
-      <input type="text" name="post_request_name" value="{{ default_name }}"><br />
+      <input type="text" name="post_request_name" value="{{ default_name }}"required><br />
       <label for="your_email"> Your email:</label><br />
-      <input type="text" name="post_request_email" value="{{ default_email}}"><br />
+      <input type="email" name="post_request_email" value="{{ default_email}}"><br />
       <label for="your_comment"> Your comment:</label><br />
       <input type = "text" name="post_request_comment" value="{{ default_comment }}"><br />
       <label for="your_job"> Your job: </label><br />
       <input type = "text" name="post_request_job" value="{{ default_job }}"><br />
-      <input type="submit" value="OK">
+      <input type="submit" value="Submit">
     </form>
     <table>
     {% for guestbook_entry in guestbook_entries %}
